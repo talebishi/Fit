@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GlobalFit Academy: REPs & ITEC Certified Fitness and Nutrition Training. Empowering future professionals with world-class education.">
-    <meta name="keywords" content="Fitness, Personal Training, REPs Certified, ITEC Training, Sports Nutrition, Ireland">
-    <title>GlobalFit Academy | ITEC & REPs Certified Training</title>
+    <meta name="description" content="Certified Personal Trainer Abhi: Transform your fitness journey with personalized training and expert nutrition consultations.">
+    <meta name="keywords" content="Personal Training, Nutrition Consultation, Fitness Trainer, Certified Trainer, Abhi, Health, Wellness">
+    <title>Abhi's Fitness | Personal Training & Nutrition Consultations</title>
     <style>
-        /* Modern Minimalist Styles */
         :root {
             --primary: #2A5C3D; /* Professional green */
             --secondary: #E0A458; /* Accent orange */
             --text: #333;
-            --bg-light: #f8f9fa; /* Light gray background */
+            --bg-light: #f8f9fa; /* Light gray */
         }
 
         body {
@@ -20,24 +19,34 @@
             margin: 0;
             line-height: 1.6;
             color: var(--text);
+            background: #fff;
         }
 
         /* Header */
         .header {
             background: var(--primary);
             color: white;
-            padding: 1.5rem;
             text-align: center;
+            padding: 2rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
 
         /* Navigation */
         .navbar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
             background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -47,7 +56,7 @@
             color: var(--primary);
             text-decoration: none;
             margin: 0 1rem;
-            font-weight: 500;
+            font-weight: bold;
             transition: color 0.3s;
         }
 
@@ -55,17 +64,22 @@
             color: var(--secondary);
         }
 
-        .menu-icon {
-            display: none;
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('gym-banner.jpg') center/cover no-repeat;
+                        url('fitness-banner.jpg') center/cover no-repeat;
             color: white;
             padding: 4rem 1rem;
             text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
         }
 
         .hero button {
@@ -74,8 +88,8 @@
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 1rem;
+            cursor: pointer;
             transition: background 0.3s;
         }
 
@@ -83,26 +97,36 @@
             background: var(--primary);
         }
 
-        /* Program Cards */
+        /* Programs Section */
+        .programs {
+            padding: 2rem;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .programs h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
         .program-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 2rem;
-            background: var(--bg-light);
         }
 
         .program-card {
-            border: 1px solid #eee;
+            background: #fff;
+            border: 1px solid #ddd;
             border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            background: #fff;
         }
 
         .program-card h3 {
             color: var(--primary);
+            margin-bottom: 1rem;
         }
 
         .program-card button {
@@ -119,14 +143,14 @@
             background: var(--primary);
         }
 
-        /* Badges Section */
-        .badges {
-            text-align: center;
+        /* Testimonials Section */
+        .testimonials {
             padding: 2rem;
+            text-align: center;
         }
 
-        .badges img {
-            margin: 0 1rem;
+        .testimonials h2 {
+            color: var(--primary);
         }
 
         /* Footer */
@@ -134,78 +158,63 @@
             background: var(--primary);
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             margin-top: 3rem;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .menu-icon {
-                display: block;
-                font-size: 1.5rem;
-                cursor: pointer;
-                color: var(--primary);
-            }
-
-            .hero { padding: 2rem 1rem; }
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>GlobalFit Academy</h1>
-        <p>REPs & ITEC Certified Training for Global Aspirations</p>
+        <h1>Welcome to Abhi's Fitness</h1>
+        <p>Your Journey to a Healthier Life Starts Here</p>
     </header>
 
     <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#programs">Programs</a>
-        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
-        <a href="#login" style="color: var(--secondary);">Student Login</a>
-        <span class="menu-icon">☰</span>
     </nav>
 
     <section class="hero" id="home">
-        <h2>Train with a Certified Fitness Professional</h2>
-        <p>Accredited by ITEC & Recognized by REPs Ireland</p>
-        <button onclick="location.href='#programs';">Explore Programs</button>
+        <h2>Achieve Your Fitness Goals with Abhi</h2>
+        <p>Expert Personal Training and Nutrition Consultations Tailored to You</p>
+        <button onclick="location.href='#programs';">Get Started</button>
     </section>
 
-    <div class="badges">
-        <img src="reps-badge.png" alt="REPs Accredited" width="100">
-        <img src="itec-badge.png" alt="ITEC Certified" width="100">
-    </div>
-
-    <section id="programs" class="program-grid">
-        <div class="program-card">
-            <h3>Personal Training</h3>
-            <p>20 Hours per Month</p>
-            <ul>
-                <li>REPs Ireland Accredited</li>
-                <li>Online + Practical Learning</li>
-            </ul>
-            <button onclick="alert('Enroll in Personal Training!')">Enroll Now →</button>
+    <section class="programs" id="programs">
+        <h2>Our Programs</h2>
+        <div class="program-grid">
+            <div class="program-card">
+                <h3>Personal Training</h3>
+                <p>Customized workout plans tailored to your goals.</p>
+                <ul>
+                    <li>1-on-1 Sessions</li>
+                    <li>Flexible Scheduling</li>
+                </ul>
+                <button>Learn More</button>
+            </div>
+            <div class="program-card">
+                <h3>Nutrition Consultations</h3>
+                <p>Expert guidance for healthy meal planning.</p>
+                <ul>
+                    <li>Personalized Nutrition Plans</li>
+                    <li>Ongoing Support</li>
+                </ul>
+                <button>Learn More</button>
+            </div>
         </div>
+    </section>
 
-        <div class="program-card">
-            <h3>Sports Nutritionist</h3>
-            <ul>
-                <li>Meal Planning (1 Month)</li>
-                <li>Global Client Toolkit</li>
-            </ul>
-            <button onclick="alert('Enroll in Sports Nutrition!')">Enroll Now →</button>
-        </div>
+    <section class="testimonials" id="testimonials">
+        <h2>What My Clients Say</h2>
+        <p>"Abhi helped me transform my lifestyle and achieve my fitness goals!"</p>
+        <p>– A Happy Client</p>
     </section>
 
     <footer class="footer">
-        <p>© 2025 GlobalFit Academy | Cork, Ireland</p>
-        <p>REPs ID: 123XYZ | ITEC Centre Code: ABC456</p>
+        <p>© 2025 Abhi's Fitness | Certified Personal Trainer</p>
+        <p>Contact: your-email@example.com | Phone: +123-456-7890</p>
     </footer>
 </body>
 </html>
