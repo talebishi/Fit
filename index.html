@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GlobalFit Academy: REPs & ITEC Certified Fitness and Nutrition Training. Empowering future professionals with world-class education.">
+    <meta name="keywords" content="Fitness, Personal Training, REPs Certified, ITEC Training, Sports Nutrition, Ireland">
     <title>GlobalFit Academy | ITEC & REPs Certified Training</title>
     <style>
-        /* Modern Minimalist Styles (similar to NASM/ACE) */
+        /* Modern Minimalist Styles */
         :root {
             --primary: #2A5C3D; /* Professional green */
             --secondary: #E0A458; /* Accent orange */
             --text: #333;
+            --bg-light: #f8f9fa; /* Light gray background */
         }
 
         body {
@@ -23,15 +26,21 @@
         .header {
             background: var(--primary);
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
         }
 
         /* Navigation */
         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: #fff;
+            padding: 1rem 2rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .navbar a {
@@ -39,15 +48,39 @@
             text-decoration: none;
             margin: 0 1rem;
             font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-icon {
+            display: none;
         }
 
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('gym-banner.jpg') center/cover;
+                        url('gym-banner.jpg') center/cover no-repeat;
             color: white;
             padding: 4rem 1rem;
             text-align: center;
+        }
+
+        .hero button {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: var(--primary);
         }
 
         /* Program Cards */
@@ -56,6 +89,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 2rem;
+            background: var(--bg-light);
         }
 
         .program-card {
@@ -63,17 +97,36 @@
             border-radius: 10px;
             padding: 1.5rem;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff;
         }
 
         .program-card h3 {
             color: var(--primary);
         }
 
-        /* Certification Badges */
+        .program-card button {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .program-card button:hover {
+            background: var(--primary);
+        }
+
+        /* Badges Section */
         .badges {
             text-align: center;
             padding: 2rem;
-            background: #f8f9fa;
+        }
+
+        .badges img {
+            margin: 0 1rem;
         }
 
         /* Footer */
@@ -87,7 +140,18 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-            .navbar a { display: block; margin: 0.5rem 0; }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--primary);
+            }
+
             .hero { padding: 2rem 1rem; }
         }
     </style>
@@ -99,19 +163,18 @@
     </header>
 
     <nav class="navbar">
-        <div class="container">
-            <a href="#home">Home</a>
-            <a href="#programs">Programs</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#login" style="color: var(--secondary);">Student Login</a>
-        </div>
+        <a href="#home">Home</a>
+        <a href="#programs">Programs</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#login" style="color: var(--secondary);">Student Login</a>
+        <span class="menu-icon">☰</span>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <h2>Train with a Certified Fitness Professional</h2>
         <p>Accredited by ITEC & Recognized by REPs Ireland</p>
-        <button style="background: var(--secondary);">Explore Programs</button>
+        <button onclick="location.href='#programs';">Explore Programs</button>
     </section>
 
     <div class="badges">
@@ -119,30 +182,29 @@
         <img src="itec-badge.png" alt="ITEC Certified" width="100">
     </div>
 
-    <div class="program-grid">
+    <section id="programs" class="program-grid">
         <div class="program-card">
-            <h3>Personal Training </h3>
+            <h3>Personal Training</h3>
             <p>20 Hours per Month</p>
             <ul>
                 <li>REPs Ireland Accredited</li>
                 <li>Online + Practical Learning</li>
             </ul>
-            <button>Enroll Now →</button>
+            <button onclick="alert('Enroll in Personal Training!')">Enroll Now →</button>
         </div>
 
         <div class="program-card">
             <h3>Sports Nutritionist</h3>
-        
             <ul>
-                <li>Meal Planning 1 Month</li>
+                <li>Meal Planning (1 Month)</li>
                 <li>Global Client Toolkit</li>
             </ul>
-            <button>Enroll Now →</button>
+            <button onclick="alert('Enroll in Sports Nutrition!')">Enroll Now →</button>
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
-        <p>© 2023 GlobalFit Academy | Cork, Ireland</p>
+        <p>© 2025 GlobalFit Academy | Cork, Ireland</p>
         <p>REPs ID: 123XYZ | ITEC Centre Code: ABC456</p>
     </footer>
 </body>
