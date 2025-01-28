@@ -3,165 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Certified Personal Trainer Abhi: Transform your fitness journey with personalized training and expert nutrition consultations.">
-    <meta name="keywords" content="Personal Training, Nutrition Consultation, Fitness Trainer, Certified Trainer, Abhi, Health, Wellness">
     <title>Abhi's Fitness | Personal Training & Nutrition Consultations</title>
-    <style>
-        :root {
-            --primary: #2A5C3D; /* Professional green */
-            --secondary: #E0A458; /* Accent orange */
-            --text: #333;
-            --bg-light: #f8f9fa; /* Light gray */
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            color: var(--text);
-            background: #fff;
-        }
-
-        /* Header */
-        .header {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Navigation */
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            color: var(--primary);
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: var(--secondary);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('fitness-banner.jpg') center/cover no-repeat;
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 1rem 0;
-        }
-
-        .hero button {
-            background: var(--secondary);
-            border: none;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .hero button:hover {
-            background: var(--primary);
-        }
-
-        /* Programs Section */
-        .programs {
-            padding: 2rem;
-            background: var(--bg-light);
-            text-align: center;
-        }
-
-        .programs h2 {
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .program-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .program-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .program-card button {
-            background: var(--secondary);
-            border: none;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .program-card button:hover {
-            background: var(--primary);
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .testimonials h2 {
-            color: var(--primary);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
@@ -192,7 +35,7 @@
                     <li>1-on-1 Sessions</li>
                     <li>Flexible Scheduling</li>
                 </ul>
-                <button>Learn More</button>
+                <button onclick="location.href='personal-training.html';">Learn More</button>
             </div>
             <div class="program-card">
                 <h3>Nutrition Consultations</h3>
@@ -201,15 +44,9 @@
                     <li>Personalized Nutrition Plans</li>
                     <li>Ongoing Support</li>
                 </ul>
-                <button>Learn More</button>
+                <button onclick="location.href='nutrition-consultation.html';">Learn More</button>
             </div>
         </div>
-    </section>
-
-    <section class="testimonials" id="testimonials">
-        <h2>What My Clients Say</h2>
-        <p>"Abhi helped me transform my lifestyle and achieve my fitness goals!"</p>
-        <p>– A Happy Client</p>
     </section>
 
     <footer class="footer">
